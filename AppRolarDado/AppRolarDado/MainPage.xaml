@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppRolarDado.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="200,0"
+            Spacing="25">
+            <Label
+                Text="ROLADOR DE DADOS"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                x:Name="NumeroAleatorio"
+                Text="0"
+                Padding="50"
+                FontSize="80"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+            
+            <Picker
+                x:Name="Picker"
+                Title="Quantidade de lados"
+                >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>4</x:String>
+                        <x:String>6</x:String>
+                        <x:String>10</x:String>
+                        <x:String>20</x:String>
+                        <x:String>100</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Button
+                x:Name="CounterBtn"
+                Text="ROLAR O DADO" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill"
+                BackgroundColor="DimGray"/>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
