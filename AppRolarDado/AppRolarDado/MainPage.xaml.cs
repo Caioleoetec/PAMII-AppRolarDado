@@ -10,6 +10,8 @@
 
         private void OnCounterClicked(object sender, EventArgs e)
         {
+            int valorEscolhido = Convert.ToInt32(Picker.SelectedItem);
+            /* Outro forma mais "verbosa" de fazer
             int valorEscolhido = 0;
             if (Picker.SelectedIndex == 0)
             {
@@ -30,10 +32,13 @@
             {
                 valorEscolhido = 100;
             }
+            */
             Random numAleatorio = new Random();
             int numero = numAleatorio.Next(1,valorEscolhido+1);
             NumeroAleatorio.Text = numero.ToString();
-            
+            // também seria uma alternativa:
+            // int numAleatorio = new Randow().Next(1,valorEscolhido+1)
+            // int numAleatorio = Randow.sorted.Next(1, valorEscolhido+1)
         }
     }
 
